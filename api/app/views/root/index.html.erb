@@ -1,0 +1,110 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">My Site</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Right Nav Button Active</a></li>
+      <li class="has-dropdown">
+        <a href="#">Right Button with Dropdown</a>
+       
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><a href="#">Left Nav Button</a></li>
+    </ul>
+  </section>
+</nav>
+
+<h1>Root#index</h1>
+<p>Find me in app/views/root/index.html.erb</p>
+
+ 
+<ul class="dropdown">
+
+  <% @projects.each do |project| %>
+    <li>
+		<a href="/projects/<%= project.id %>">
+			<%= project.name %> 
+		</a>
+	</li>
+  <% end %>
+  
+</ul>
+
+
+<h1>i5ting Tab with slide</h1>
+<div class="wrap1">
+   <br/><br/><br/><br/>
+
+   <div class='i5ting_tab_header'> 
+        <ul>
+            <li class="current">
+            	<a href="#">tab说明</a>	
+            </li>
+            <li>
+            	<a href="#">特性</a>
+            </li>
+            <li>
+            	<a href="#">开源协议</a>
+            </li>
+            <li>
+            	<a href="#">源码</a>
+            </li>
+            <li class="last">
+            	<a href="#">张婷作品</a>
+            </li>
+        </ul>
+	</div>
+      <div class="i5ting_tab_content">
+          <div class="i5ting_tab_content_item current_content">
+			<br/>
+			i5ting-jquery-tab
+			<br/><br/>
+			<p>说明</p>
+			<ol>
+				<li>1. a copy of iciba.com tab implement </li>
+				<li>2. 基于jQuery插件机制</li>
+				<li>3. 可配置</li>
+			</ol>
+		
+		
+		</div>
+          <div class="i5ting_tab_content_item">
+			<br/>
+			i5ting-jquery-tab
+			<br/><br/>
+			<p>特性</p>
+			<ol>
+				<li>1. jquery插件，支持配置</li>
+				<li>2. 显示隐藏按钮，可配置</li>
+			</ol>
+		
+		</div>
+          <div class="i5ting_tab_content_item">
+			<br/>
+			apache 2.0
+		</div>
+          <div class="i5ting_tab_content_item">
+			<br/>
+			源码位于
+			<br/>
+			https://github.com/i5ting/i5ting-jquery-tab.git
+		</div>
+          <div class="i5ting_tab_content_item">
+			<br/>
+			作者：张婷
+			<br/>
+			我女朋友，css和js有很多是她写，重构部分是我写的
+		</div>
+	
+      </div>
+
+  </div>

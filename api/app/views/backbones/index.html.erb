@@ -1,0 +1,29 @@
+<h1>Listing backbones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Detail</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @backbones.each do |backbone| %>
+      <tr>
+        <td><%= backbone.name %></td>
+        <td><%= backbone.detail %></td>
+        <td><%= link_to 'Show', backbone %></td>
+        <td><%= link_to 'Edit', edit_backbone_path(backbone) %></td>
+        <td><%= link_to 'Destroy', backbone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Backbone', new_backbone_path %>

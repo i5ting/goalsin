@@ -1,0 +1,25 @@
+<%= form_for(@backbone) do |f| %>
+  <% if @backbone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@backbone.errors.count, "error") %> prohibited this backbone from being saved:</h2>
+
+      <ul>
+      <% @backbone.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :detail %><br>
+    <%= f.text_area :detail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

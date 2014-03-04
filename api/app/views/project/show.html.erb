@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<% @projects.each do |project| %>
+<li>
+	<a href="/projects/<%= project.id %>">
+		<%= project.name %> 
+	</a>
+</li>
+<% end %>
+ 
+<hr>
+ 
+<h1 class='project_info' project_id="<%= @project.id %>"><%= @project.name %>首页</h1>
+
+<%= @project.to_json %>
+<div>
+	<dl class="accordion" data-accordion>
+	  <dd>
+	    <a href="#panel1">高级配置项</a>
+	    <div id="panel1" class="content">
+			<form>
+			  <div class="row">
+			    <div class="large-12 columns">
+  			      <label>默认选项</label>
+  			      <input id="checkbox1" key="editable" type="checkbox" <%= @project.editable ? 'checked':'' %>  >
+				  <label for="checkbox1">编辑</label>
+  			      <input id="checkbox2" key="checkable" type="checkbox" <%= @project.checkable ? 'checked':'' %>  >
+				  <label for="checkbox2">check</label>
+				  
+				  <input id="checkbox3" key="is_show_icon" type="checkbox" <%= @project.is_show_icon ? 'checked':'' %>>
+				  <label for="checkbox2">显示icon</label>
+				   
+				  <input id="checkbox4" key="is_show_line" type="checkbox" <%= @project.is_show_line ? 'checked':'' %>>
+				  <label for="checkbox2">显示line</label>
+					
+				  <input id="checkbox5" key="is_show_title" type="checkbox" <%= @project.is_show_title ? 'checked':'' %>>
+				  <label for="checkbox2">显示title</label>
+					 
+				  <input id="checkbox6" key="is_expand_all" type="checkbox" <%= @project.is_expand_all ? 'checked':'' %>>
+				   <label for="checkbox2">展开全部</label>
+  			    </div>
+			  </div>
+			</form>
+		</div>
+	</dl>
+	
+</div>
+	
+<hr>
+
+<div class='content'>
+	<div class='left_menu'>
+		<ul id="treeId" class="ztree"></ul>
+	</div>
+	
+	<div class='main'>
+		<div class='main_detail'>
+			ddd
+		</div>
+		<div class='count_info'>
+			当前被勾选的节点共 <span id='checkCount'>0</span> 个<br>
+			当前未被勾选的节点共 <span id='nocheckCount'>0</span>  个<br>
+			勾选状态对比规则：与 zTree 初始化时对比<br>
+			与上一次勾选后对比<br>
+			当前被修改勾选状态的节点共 <span id='changeCount'>0</span>  个<br>
+		</div>
+	</div>
+</div>

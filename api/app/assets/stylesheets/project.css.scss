@@ -1,0 +1,38 @@
+// Place all the styles related to the root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content{
+	display:block;
+	border: 1px solid red;
+	
+	.left_menu{
+		margin-top: 10px;
+		border: 1px solid #617775;
+		background: #f0f6e4;
+		width: 220px;
+		height: 360px;
+		overflow-y: scroll;
+		overflow-x: auto;
+		
+		display:block;
+		width:18%;
+		height:90%;
+		float:left;
+	}
+	.main{
+		border: 1px solid lightblue;
+		display:block;
+		width:80%;
+		height:90%;
+		float:right;
+		
+		.count_info{
+			background: #f0f6e4;
+			width: 100%;
+			height: 100px;
+			display:block;
+			border: 1px solid red;
+		}
+	}
+}

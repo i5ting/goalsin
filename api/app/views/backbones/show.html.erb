@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @backbone.name %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @backbone.detail %>
+</p>
+
+<%= link_to 'Edit', edit_backbone_path(@backbone) %> |
+<%= link_to 'Back', backbones_path %>
